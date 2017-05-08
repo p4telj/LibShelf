@@ -71,6 +71,7 @@ public:
 private:
     // if debug : outputs errors/messages to console | otherwise, outputs to log
     bool debug;
+    std::ostringstream logger;
     std::ofstream log;
     
     /* MYSQL SERVER CONFIGURATION / CONNECTION HANDLING [2] */

@@ -19,7 +19,7 @@
 Loader::Loader(const Wt::WEnvironment& env)
 : Wt::WApplication(env)
 {
-    setTitle("Hello world");
+    setTitle("LibraryManagement");
     
     root()->addWidget(new Wt::WText("Your name, please ? "));
     nameEdit_ = new Wt::WLineEdit(root());

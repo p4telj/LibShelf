@@ -7,8 +7,6 @@
  *
  */
 
-
-// test
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -20,12 +18,7 @@ using namespace std;
 
 /* CONSTRUCTOR / DESTRUCTOR */
 // custom constructor: specifies debug mode
-database::database(bool _debug) : debug(_debug) {
-    std::time_t result = std::time(nullptr);
-    if(debug) cout << "Version " << VERSION << " Application Executed: " << std::asctime(std::localtime(&result));
-    log.open("libMa.log", std::ios_base::app);
-    log << "Version " << VERSION << " Application Executed: " << std::asctime(std::localtime(&result)) << endl;
-}
+database::database(bool _debug) : debug(_debug) {}
 
 // destructor : deletes connection, statement, result objs
 database::~database() { delete connection; delete script; delete result; }
@@ -57,6 +50,11 @@ void database::connect() {
 /* USER MANAGEMENT */
 // logs user in : returns success / failure
 bool database::usr_login() {
+    std::time_t result = std::time(nullptr);
+    log.open("libMa.log", std::ios_base::app);
+    logger << "Version " << VERSION << " Application Executed: " << std::asctime(std::localtime(&result)) << endl;
+    if(debug) cout << logger.str();
+    // record acccess # too
     return 0;
 }
 
