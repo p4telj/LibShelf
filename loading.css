@@ -9,80 +9,53 @@
 /***** GENERAL STYLES *****/
 body {
   position: absolute;
-  top:0; bottom:0; left:0; right:0;
+  overflow: hidden;
+  top: 0; bottom: 0; left: 0; right: 0;
   background: url(assets/library_background3.jpeg) no-repeat center center fixed;
   background-size: cover;
-}
- 
-
-
-
-
-
- .glass {
-  left:0;
-  right:0;
-  top:0;
-  bottom:0;
-  margin:auto;
-  content: "text";
-  position: absolute; width: 100%;
-  z-index: -1; /* Keep the background behind the content */
-  min-height: 250px;
-  max-height: 250px;
-  /* don't forget to use the prefixes you need 
-  border-top: solid 0.07em #744015;
-  border-bottom: solid 0.07em #744015;*/
-  overflow: hidden
- }
-
-  .blur_wrapper {
-  left:0;
-  right:0;
-  top:0;
-  bottom:0;
-  margin:auto;
-  content: "text";
-  position: absolute; width: 100%;
-  background: url(assets/library_background3.jpeg)  no-repeat center center fixed;
-  background-size: cover;
-  z-index: -10; /* Keep the background behind the content */
-  min-height: 260px;
-  max-height: 260px;
-  /* don't forget to use the prefixes you need */
-  -webkit-filter: blur(150px);
-  overflow: hidden
- }
-
- .logo {
- 	top:0; bottom:0; right:0; left:50%;
- 	margin:auto;
- 	position:absolute;
- 	height: 150px;
- 	-webkit-animation: move_left 5s;
- 	-webkit-animation-fill-mode: forwards;
-  z-index: 3;
- }
-.wrapper {
-	display: table;
-	align-items: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 div {
- 	display: table-cell;
- 	font-family: 'Roboto', sans-serif;
- 	position: absolute;
- 	z-index: 1;
- 	color: white;
- 	top:0; bottom:0; right:0; left:0;
- 	margin-left: auto;
- 	margin-right:auto;
- 	padding:0;
- 	text-align: center;
- 	vertical-align: middle;
- 	border: solid black;
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0; 
+  margin: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+img {
+  top: 0; bottom: 0; left: 0; right: 0;
+  position: absolute;
+}
+
+/***** CONTENT STYLES *****/
+.wrapper {
+
+}
+
+.blur {
+  content: "text";
+  background: url(assets/library_background3.jpeg) no-repeat center center fixed;
+  background-size: cover;
+  min-height: 260px; max-height: 260px; /* standardize for mobile */
+  -webkit-filter: blur(150px); -moz-filter: blur(150px);
+  -o-filter: blur(150px); -ms-filter: blur(150px);
+
+}
+
+ .logo {
+  left: 50%;
+  margin: auto;
+ 	height: 150px;
+ 	-webkit-animation: move_left 5s; -moz-animation: move_left 5s;
+  -o-animation: move_left 5s; -ms-animation: move_left 5s;
+ 	-webkit-animation-fill-mode: forwards; -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards; -ms-animation-fill-mode: forwards;
  }
 
+
+/***** ANIMATION *****/
  @-webkit-keyframes move_left {
  	0% {}
  	100% { left:-70%; }
