@@ -7,31 +7,39 @@
  */
 
 /***** GENERAL STYLES *****/
-body {
+body, div, img {
   position: absolute;
   overflow: hidden;
   top: 0; bottom: 0; left: 0; right: 0;
+}
+
+body {
   background: url(assets/library_background3.jpeg) no-repeat center center fixed;
   background-size: cover;
   font-family: 'Roboto', sans-serif;
 }
 
 div {
-  position: absolute;
-  top: 0; bottom: 0; left: 0; right: 0; 
   margin: auto;
   width: 100%;
   overflow: hidden;
 }
 
-img {
-  top: 0; bottom: 0; left: 0; right: 0;
-  position: absolute;
-}
 
 /***** CONTENT STYLES *****/
-.wrapper {
+.title {
+  color: white;
+  letter-spacing: 3px;
+  top: 0; bottom: 0; left: 0; right: 0;
+  margin: auto;
+  height: 100%;
+  vertical-align: middle;
+}
 
+.wrapper {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
 }
 
 .blur {
@@ -47,16 +55,16 @@ img {
  .logo {
   left: 50%;
   margin: auto;
- 	height: 150px;
- 	-webkit-animation: move_left 5s; -moz-animation: move_left 5s;
+  height: 150px;
+  -webkit-animation: move_left 5s; -moz-animation: move_left 5s;
   -o-animation: move_left 5s; -ms-animation: move_left 5s;
- 	-webkit-animation-fill-mode: forwards; -moz-animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards; -moz-animation-fill-mode: forwards;
   -o-animation-fill-mode: forwards; -ms-animation-fill-mode: forwards;
  }
 
 
 /***** ANIMATION *****/
  @-webkit-keyframes move_left {
- 	0% {}
- 	100% { left:-70%; }
+  0% {}
+  100% { left:-70%; }
  }
