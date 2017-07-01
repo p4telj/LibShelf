@@ -1,0 +1,9 @@
+LibShelf --- C++ (Wt) Backend Library Management System
+
+Jimil A. Patel
+<pateljim@umich.edu>
+=======================================================
+
+Tasks required:
+1. Create login page, HTML -- no Wt integration
+2. Integrate HTML frontpage with Wt, main.cpp

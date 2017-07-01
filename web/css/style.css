@@ -1,0 +1,198 @@
+/****** GENERAL ******/
+
+
+.parallax-container {
+  height: 100%;
+  height: 100vh;
+
+}
+
+@media only screen and (max-width : 992px) {
+  .parallax img {
+    max-height: 150%; /* or a little bit higher */
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .parallax img {
+    max-height: 170%; /* or higher percentages. It's up to your taste */
+  }
+}
+
+.label {
+  border-right: 1px black solid;
+  bottom: 0;
+}
+
+.login {
+  min-height: 8em;
+  height: 8em;
+  margin-bottom: 0;
+}
+
+aside {
+  margin-bottom: 0;
+}
+
+/*.row {
+  min-height: 8em;
+  height: 8em;
+}
+*/
+
+
+/****** RE-USABLE ******/
+
+
+
+/****** MATERIALIZE OVERRIDES ******/
+
+/*** FONT OVERRIDES ***/
+h1, h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: lighter;
+  letter-spacing: 14px;
+}
+
+#white_icon {
+  color: white;
+}
+
+#light_blue_icon {
+  color: #6A8CC1;
+}
+
+#mid_blue_icon {
+  color: #204672;
+}
+
+/*** NAVBAR OVERRIDES ***/
+nav {
+  position: fixed;
+  font-family: 'Raleway', sans-serif;
+  background-color: rgba(255,255,255,0.9);
+  height: 60px;
+  line-height: 60px;
+  z-index: 7;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+#sidenav-overlay {
+  z-index: 6;
+}
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+#nav-mobile a {
+  font-size: 150%;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+
+#nav-mobile {
+  padding-top: 15px;
+}
+
+.nav-wrapper {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.nav-wrapper a {
+  font-size: 1.5em;
+  letter-spacing: 4px;
+}
+
+nav #logo-container {
+  font-size: 2rem;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+
+nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
+    height: 60px;
+    line-height: 60px;
+}
+
+nav .button-collapse i {
+    height: 60px;
+    line-height: 60px;
+}
+
+nav .brand-logo { 
+    font-size: 1.6rem; 
+}
+
+@media only screen and (min-width: 601px){
+    nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+        height: 60px;
+        line-height: 60px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+  nav .brand-logo {
+    font-size: 1rem;
+  }
+
+}
+
+/*** HEADER OVERRIDES ***/
+.header {
+  margin-top: 30%;
+  height: 100%;
+}
+
+
+
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+/*.parallax-container {
+  min-height: 100%;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}*/
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
