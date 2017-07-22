@@ -1,0 +1,8 @@
+# OS generated files
+**/.DS_Store
+
+# IDE generated files
+**/.idea
+
+# Python cache
+**/*.pyc

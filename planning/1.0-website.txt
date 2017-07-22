@@ -1,4 +1,4 @@
-LibShelf --- C++ (Wt) Backend Library Management System
+LibShelf --- Python (Django) Backend Library Management System
 
 Jimil A. Patel
 <pateljim@umich.edu>
