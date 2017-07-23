@@ -1,0 +1,152 @@
+{# HTML #}
+{% extends 'master_template.html' %}
+{% load static %}
+
+	{# HEAD #}
+	{% block title %}
+		LibShelf
+	{% endblock %}
+
+	{# BODY #}
+
+		{# HEADER #}
+		{% block header-picture %}
+			<div class="parallax"><img src="{% static 'assets/index_background.jpg' %}" alt="Background stock photo of book"></div>
+		{% endblock %}
+
+		{# NAVBAR #}
+		{% block header-navbar-title %}
+			LibShelf
+		{% endblock %}
+
+		{% block header-navbar-links-mobile %}
+			<li><a href="#form-login">Login</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#form-join">Join</a></li>
+		{% endblock %}
+
+		{% block header-navbar-links-normal %}
+			<li><a href="#form-login">Login</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#form-join">Join</a></li>
+		{% endblock %}
+
+		{% block header-title %}
+			<div class="container">
+				<h1 class="header center">LibShelf</h1>
+				<div class="row center">
+					<h2><a href="#about"><i id="white_icon" class="fa fa-angle-down small" aria-hidden="true"></i></a></h2>
+				</div>
+			</div>
+		{% endblock %}
+
+		{# ABOUT #}
+		{% block body-content %}
+			<section class="about" id="about">
+				<div class="container">
+					<div class="row valign">
+						<div class="col l4 m4 s12 center">
+							<i class="fa fa-3x fa-book" aria-hidden="true"></i>
+							<h5><b>Library</b></h5>
+							<p class="flow-text">A user friendly, sleek interfaced, library management tool.</p>
+						</div>
+						<div class="col l4 m4 s12 center">
+							<i class="fa fa-3x fa-users" aria-hidden="true"></i>
+							<h5><b>Users</b></h5>
+							<p class="flow-text">Create or join a library, be an administrator or a patron.</p>
+						</div>
+						<div class="col l4 m4 s12 center">
+							<i class="fa fa-3x fa-database" aria-hidden="true"></i>
+							<h5><b>Media Storage</b></h5>
+							<p class="flow-text">Add media and query it from an easy to use database.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+					
+			{# FORMS #}
+		    <section class="forms valign-wrapper" id="forms">
+		    	<div class="container">
+		    		<h4 class="center">Get started <a class="red-text text-accent-1" href="#form-join">here </a>or <a href="#form-login">login</a></h4>
+		    	</div>
+		    </section>
+
+			{# ABOUT2 #}
+			<section class="about2">
+				<div class="container">
+					<article>
+						<p class="flow-text center">Best of all, this mini-project is Open Source. Follow this <a href="https://www.github.com/p4telj/libshelf">link</a> to learn more.</p>
+					</article>
+				</div>
+		    </section>
+
+		    {# LOGIN FORM #}
+			<div class="valign-wrapper row form-box modal modal-fixed-footer" id="form-login">
+				<form>
+					<div class="modal-content">
+						<h4>Login</h4>
+						<div class="row">
+							<div class="input-field col s12">
+								<label for="email">Email</label>
+		            			<input type="email" class="validate" name="email" id="email" />
+							</div>
+							<div class="input-field col s12">
+			            		<label for="password">Password</label>
+			            		<input type="password" class="validate" name="password" id="password" />
+			          		</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<input type="reset" id="reset-login" class="btn-flat grey-text waves-effect">
+			        	<input type="submit" class="btn green waves-effect waves-light modal-close" value="Login">
+					</div>
+				</form>
+			</div>
+
+			{# JOIN FORM #}
+			<div class="valign-wrapper row form-box modal modal-fixed-footer" id="form-join">
+				<form>
+					<div class="modal-content">
+						<h4>Login</h4>
+						<div class="row">
+							<div class="input-field col s12">
+								<label for="email">Email</label>
+		            			<input type="email" class="validate" name="email" id="email" />
+							</div>
+							<div class="input-field col s12">
+			            		<label for="password">Password</label>
+			            		<input type="password" class="validate" name="password" id="password" />
+			          		</div>
+
+			          		<h1> Number of libraries is {{ libnum }}</h1>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<input type="reset" id="reset-login" class="btn-flat grey-text waves-effect">
+			        	<input type="submit" class="btn green waves-effect waves-light modal-close" value="Login">
+					</div>
+				</form>
+			</div>
+	    {% endblock %}
+		
+		{# FOOTER #}
+		{% block footer %}
+			<footer class="page-footer blue darken-4">
+			<div class="container">
+			  <div class="row">
+			    <div class="col l5 s12">
+			      <h5 class="white-text">Connect</h5>
+			      <ul>
+			        <li><i class="footer-icons fa fa-envelope-o" aria-hidden="true"></i><a class="white-text" href="mailto:pateljim@umich.edu"> Email</a></li>
+			        <li><i class="footer-icons fa fa-github" aria-hidden="true"></i><a class="white-text" href="https://www.github.com/p4telj"> Github</a></li>
+			      </ul>
+			    </div>
+			  </div>
+			</div>
+			<div class="footer-copyright">
+			  <div class="container">
+			  	Developed by <a href="mailto:pateljim@umich.edu" class="deep-orange-text text-accent-1">Jimil A. Patel</a>
+			  </div>
+			</div>
+			</footer>
+		{% endblock %}

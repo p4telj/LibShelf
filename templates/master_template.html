@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>{% block title %}{% endblock %}</title>
+		{# META #}
+		<meta charset="UTF-8">
+		<meta name="description" content="personal/organizational library management, simplified.">
+		<meta name="keywords" content="Python, Django, LibShelf, library, media, books">
+		<meta name="author" content="Jimil Patel">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		{# FONTS #}
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+		{# STYLESHEETS  #}
+		{% load static %}
+		<link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+		{% load static %}
+		<link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+		{# SCRIPTS #} 
+		<script src="https://use.fontawesome.com/4508998515.js"></script>
+		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		{% load static %}
+		<script src="{% static 'js/materialize.js' %}"></script>
+		{% load static %}
+		<script src="{% static 'js/init.js' %}"></script>
+	</head>
+	<body>
+		{# HEADER #} 
+		<header class="parallax-container">
+			{% block header-picture %}{% endblock %}
+			{# Navbar #} 
+			<nav role="navigation">
+				<div class="nav-wrapper">
+					<a id="logo-container" class="brand-logo">{% block header-navbar-title %}{% endblock %}</a>
+					<ul class="right hide-on-med-and-down">
+						{% block header-navbar-links-normal %}{% endblock %}
+					</ul>
+					<ul id="nav-mobile" class="side-nav">
+						{% block header-navbar-links-mobile %}{% endblock %}
+				  	</ul>
+					<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons nav-mobile-icon" id="mid_blue_icon">menu</i></a>
+				</div>
+			</nav>
+			{% block header-title %}{% endblock %}
+		</header>
+
+		{# ADDITIONAL CONTENT #}
+		{% block body-content %}{% endblock %}
+
+		{# FOOTER #}
+		{% block footer %}{% endblock %}
+
+	</body>
+</html>
